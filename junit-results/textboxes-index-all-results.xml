@@ -1,0 +1,14 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="19.476785999999382">
+<testsuite name="textBoxes.spec.ts" timestamp="2026-08-14T17:46:13.207Z" hostname="chrome" tests="1" failures="0" skipped="0" time="12.674" errors="0">
+<testcase name="HTML elements - Text Box, Check Box, Radio Button, Web Tables, Buttons, Links, Broken Links - Images, Upload and Download › TEXT BOX: should submit form and display output correctly" classname="textBoxes.spec.ts" time="12.674">
+<system-out>
+<![CDATA[[SETUP] Starting test: Navigating to the Text Box page
+[TEST] Filling the form with test data
+[TEST] Submitting the form
+[TEST] Form submission output verified successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

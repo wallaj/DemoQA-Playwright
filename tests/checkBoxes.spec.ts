@@ -522,20 +522,115 @@ test.describe.serial('CHECKBOX: Hierarchical tree selection with parent-child re
     console.log('[TEST12] Checking if tree has selected nodes');
 
     await checkboxPage.expandAllNodes();
+    // Reset state left by previous serial tests before validating the initial condition
+    await checkboxPage.clearAllSelections();
+    await pauseOneSecond(sharedPage);
 
     // Initially should have no selections
     let hasSelected = await checkboxPage.hasSelectedNodes();
     console.log(`[TEST12] Initial state - has selected nodes: ${hasSelected}`);
     expect(hasSelected).toBe(false);
+    await pauseOneSecond(sharedPage);
 
     // After checking a node
     console.log('[TEST12] Checking a node');
     await checkboxPage.checkNode('Desktop');
+    await pauseOneSecond(sharedPage);
 
+    // Now should have selected nodes
     hasSelected = await checkboxPage.hasSelectedNodes();
     console.log(`[TEST12] After checking - has selected nodes: ${hasSelected}`);
     expect(hasSelected).toBe(true);
+    await pauseOneSecond(sharedPage);
 
     console.log('[TEST12] ✓ Selected nodes state verified correctly');
+  });
+
+  /**
+   * Test 13: Recursive Tree Traversal
+   * Scope: Verify the complete hierarchy can be collected recursively
+   * Validations:
+   * - Root node is Home
+   * - Expected child branches exist under Home
+   * - Nested descendants are attached to the correct branch
+   * - Every collected node exposes state and hierarchy properties
+   * Out of scope: Checkbox cascade behavior and indeterminate state rendering
+   */
+  test('test13 - TREE: recursively collect branches and node information', async () => {
+    console.log('[TEST13] Recursively validating tree branches and node information');
+
+    await checkboxPage.expandAllNodes();
+    // Keep traversal independent from selections made by previous serial tests
+    await checkboxPage.clearAllSelections();
+    await pauseOneSecond(sharedPage);
+
+    console.log('[TEST13] Collecting the complete tree hierarchy');
+    const hierarchy = await checkboxPage.getTreeHierarchy();
+    await pauseOneSecond(sharedPage);
+
+    expect(hierarchy.length).toBeGreaterThan(0);
+    expect(hierarchy[0].label).toBe('Home');
+    await pauseOneSecond(sharedPage);
+
+    // Define a recursive type for expected branches to validate against the actual hierarchy
+    type ExpectedBranch = {
+      label: string;
+      children?: ExpectedBranch[];
+    };
+
+    // Define the expected tree structure for validation
+    const expectedBranches: ExpectedBranch = {
+      label: 'Home',
+      children: [
+        { label: 'Desktop', children: [{ label: 'Notes' }, { label: 'Commands' }] },
+        {
+          label: 'Documents',
+          children: [
+            {
+              label: 'WorkSpace',
+              children: [{ label: 'React' }, { label: 'Angular' }, { label: 'Veu' }],
+            },
+            {
+              label: 'Office',
+              children: [
+                { label: 'Public' },
+                { label: 'Private' },
+                { label: 'Classified' },
+                { label: 'General' },
+              ],
+            },
+          ],
+        },
+        {
+          label: 'Downloads',
+          children: [{ label: 'Word File.doc' }, { label: 'Excel File.doc' }],
+        },
+      ],
+    };
+
+    // Helper function to find a node by label in the actual hierarchy
+    const findNode = (nodes: typeof hierarchy, label: string) =>
+      nodes.find((node) => node.label === label);
+
+    // Recursive function to validate the actual hierarchy against the expected structure
+    const validateBranch = (actualNodes: typeof hierarchy, expected: ExpectedBranch) => {
+      const actual = findNode(actualNodes, expected.label);
+
+      expect(actual, `Expected branch "${expected.label}" to exist`).toBeDefined();
+      expect(actual).toHaveProperty('checked');
+      expect(actual).toHaveProperty('expanded');
+      expect(actual).toHaveProperty('hasChildren');
+      expect(actual?.hasChildren).toBe((expected.children?.length ?? 0) > 0);
+
+      for (const child of expected.children ?? []) {
+        validateBranch(actual?.children as typeof hierarchy, child);
+      }
+    };
+
+    console.log('[TEST13] Validating every expected branch recursively');
+    validateBranch(hierarchy, expectedBranches);
+    await pauseOneSecond(sharedPage);
+
+    console.log('[TEST13] ✓ Recursive tree traversal completed successfully');
   });
 });

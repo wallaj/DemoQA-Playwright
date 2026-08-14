@@ -52,8 +52,8 @@ export default class ReportSubfolderReporter implements Reporter {
     }
   }
 
-  // onEnd is called after all tests have finished, so we can safely rename the temp output folder to the final destination.
-  onEnd(_result: FullResult) {
+  // onExit runs after all reporters have finished writing report attachments.
+  async onExit(): Promise<void> {
     // html reporter + outputDir share the same temp folder, so this single
     // rename keeps every internal relative link (report <-> screenshots) intact.
     this.moveDir(this.tempReportDir, `test-results/${this.specName}/${this.subfolder}`);

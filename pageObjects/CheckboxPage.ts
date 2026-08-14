@@ -1,4 +1,12 @@
 import { Page, Locator } from '@playwright/test';
+// This file defines a Page Object for the DemoQA CheckBox page, which contains a hierarchical tree of checkboxes.
+type TreeNodeInfo = {
+  label: string;
+  checked: boolean;
+  expanded: boolean;
+  hasChildren: boolean;
+  children: TreeNodeInfo[];
+};
 
 /**
  * CheckboxPage - Page Object for DemoQA CheckBox section at /checkbox
@@ -158,15 +166,74 @@ export class CheckboxPage {
   }
 
   /**
+   * Recursively collect the visible tree hierarchy and node state.
+   * The tree must be expanded before calling this method so every branch is available in the DOM.
+   */
+
+
+
+  // Recursively retrieves the tree hierarchy and returns it as a structured array of TreeNodeInfo objects.
+  async getTreeHierarchy(): Promise<TreeNodeInfo[]> {
+    console.log('[CHECKBOX] Recursively retrieving tree hierarchy');
+
+    // Use page.evaluate to run code in the browser context and collect the hierarchy
+    const hierarchy = await this.page.evaluate((): TreeNodeInfo[] => {
+      const roots: TreeNodeInfo[] = [];
+      const ancestors: Array<{ depth: number; node: TreeNodeInfo }> = [];
+      const treeItems = document.querySelectorAll('div[role="treeitem"]');
+
+      // Iterate through each tree item and build the hierarchy based on depth and parent-child relationships
+      treeItems.forEach((item) => {
+        const titleElement = item.querySelector('span.rc-tree-title');
+        const checkboxElement = item.querySelector('span.rc-tree-checkbox');
+        const switcherElement = item.querySelector('span.rc-tree-switcher');
+
+        // Create a new TreeNodeInfo object for the current item
+        const node: TreeNodeInfo = {
+          label: titleElement?.textContent?.trim() ?? '',
+          checked: checkboxElement?.getAttribute('aria-checked') === 'true',
+          expanded: item.getAttribute('aria-expanded') === 'true',
+          hasChildren:
+            switcherElement !== null &&
+            !switcherElement.classList.contains('rc-tree-switcher-noop'),
+          children: [],
+        };
+        const depth = item.querySelectorAll('span.rc-tree-indent-unit').length;
+
+        // Pop ancestors until we find the correct parent based on depth
+        while (ancestors.length > 0 && ancestors[ancestors.length - 1].depth >= depth) {
+          ancestors.pop();
+        }
+
+        const parent = ancestors[ancestors.length - 1]?.node;
+        if (parent) {
+          parent.children.push(node);
+        } else {
+          roots.push(node);
+        }
+
+        ancestors.push({ depth, node });
+      });
+
+      return roots;
+    });
+
+    console.log(`[CHECKBOX] Recursively found ${hierarchy.length} root nodes`);
+    return hierarchy;
+  }
+
+  /**
    * Get list of all currently checked nodes
    */
   async getCheckedNodes(): Promise<string[]> {
     console.log('[CHECKBOX] Getting list of checked nodes');
 
+    // Use page.evaluate to run code in the browser context and collect checked nodes
     const checked = await this.page.evaluate((): string[] => {
       const items: string[] = [];
       const checkedBoxes = document.querySelectorAll('span.rc-tree-checkbox[aria-checked="true"]');
 
+      // For each checked checkbox, find its closest tree item and get the label text
       checkedBoxes.forEach((box: Element) => {
         const parent = box.closest('div[role="treeitem"]');
         const titleElement = parent?.querySelector('span.rc-tree-title');
@@ -188,6 +255,7 @@ export class CheckboxPage {
   async isNodeChecked(label: string): Promise<boolean> {
     console.log(`[CHECKBOX] Checking if node "${label}" is checked`);
 
+    // Use the checkbox locator to evaluate its checked state
     const checked = await this.checkbox(label).evaluate((el) => {
       return el.getAttribute('aria-checked') === 'true';
     });

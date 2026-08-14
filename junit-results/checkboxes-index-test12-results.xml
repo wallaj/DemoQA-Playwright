@@ -1,0 +1,36 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="18.087520999999718">
+<testsuite name="checkBoxes.spec.ts" timestamp="2026-08-14T17:51:29.210Z" hostname="chrome" tests="1" failures="0" skipped="0" time="4.638" errors="0">
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test12 - STATE: verify has selected nodes after selection" classname="checkBoxes.spec.ts" time="4.638">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for checkbox tests
+[SETUP] Navigating to Checkbox page
+[CHECKBOX] Navigating to checkbox page
+[CHECKBOX] Checkbox page loaded successfully
+[SETUP] Checkbox page initialized and ready
+[TEST12] Checking if tree has selected nodes
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] All nodes expanded
+[CHECKBOX] Getting list of checked nodes
+[CHECKBOX] 0 nodes are checked: 
+[TEST12] Initial state - has selected nodes: false
+[TEST12] Checking a node
+[CHECKBOX] Checking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[CHECKBOX] Node "Desktop" checked
+[CHECKBOX] Getting list of checked nodes
+[CHECKBOX] 3 nodes are checked: Desktop, Notes, Commands
+[TEST12] After checking - has selected nodes: true
+[TEST12] ✓ Selected nodes state verified correctly
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
