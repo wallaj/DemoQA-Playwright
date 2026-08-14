@@ -1,0 +1,180 @@
+<testsuites id="" name="" tests="12" failures="1" skipped="8" errors="0" time="16.631112">
+<testsuite name="checkBoxes.spec.ts" timestamp="2026-07-31T03:18:24.062Z" hostname="chrome" tests="12" failures="1" skipped="8" time="7.505" errors="0">
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test1 - TREE STRUCTURE: expand all nodes and display complete hierarchy" classname="checkBoxes.spec.ts" time="3.434">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for checkbox tests
+[SETUP] Navigating to Checkbox page
+[CHECKBOX] Navigating to checkbox page
+[CHECKBOX] Checkbox page loaded successfully
+[SETUP] Checkbox page initialized and ready
+[TEST1] Verifying tree can expand and show all nodes
+[CHECKBOX] Retrieving tree structure
+[CHECKBOX] Found 1 tree items
+[TEST1] Initial visible nodes: 1
+[TEST1] Expanding all nodes
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] All nodes expanded
+[CHECKBOX] Retrieving tree structure
+[CHECKBOX] Found 17 tree items
+[TEST1] After expansion: 17 nodes visible
+[TEST1] Nodes: Home, Desktop, Notes, Commands, Documents, WorkSpace, React, Angular, Veu, Office, Public, Private, Classified, General, Downloads, Word File.doc, Excel File.doc
+[TEST1] ✓ Tree structure expanded successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test2 - TREE STRUCTURE: collapse all nodes" classname="checkBoxes.spec.ts" time="1.204">
+<system-out>
+<![CDATA[[TEST2] Verifying tree can collapse all nodes
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] All nodes expanded
+[CHECKBOX] Retrieving tree structure
+[CHECKBOX] Found 17 tree items
+[TEST2] After expansion: 6 nodes expanded
+[TEST2] Collapsing all nodes
+[CHECKBOX] Collapsing all tree nodes
+[CHECKBOX] Found 6 expanded nodes, collapsing...
+[CHECKBOX] All nodes collapsed
+[CHECKBOX] Retrieving tree structure
+[CHECKBOX] Found 1 tree items
+[TEST2] After collapse: 0 nodes expanded
+[TEST2] ✓ All nodes collapsed successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test3 - CHECKBOX: check individual nodes independently" classname="checkBoxes.spec.ts" time="1.493">
+<system-out>
+<![CDATA[[TEST3] Verifying individual checkbox selection
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] All nodes expanded
+[TEST3] Checking node "Desktop"
+[CHECKBOX] Checking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[CHECKBOX] Node "Desktop" checked
+[TEST3] Checking node "Notes"
+[CHECKBOX] Checking node "Notes"
+[CHECKBOX] Checking if node "Notes" is checked
+[CHECKBOX] Node "Notes" is checked
+[CHECKBOX] Node "Notes" is already checked
+[TEST3] Checking node "Commands"
+[CHECKBOX] Checking node "Commands"
+[CHECKBOX] Checking if node "Commands" is checked
+[CHECKBOX] Node "Commands" is checked
+[CHECKBOX] Node "Commands" is already checked
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is checked
+[TEST3] Verification: "Desktop" is checked
+[CHECKBOX] Checking if node "Notes" is checked
+[CHECKBOX] Node "Notes" is checked
+[TEST3] Verification: "Notes" is checked
+[CHECKBOX] Checking if node "Commands" is checked
+[CHECKBOX] Node "Commands" is checked
+[TEST3] Verification: "Commands" is checked
+[CHECKBOX] Getting list of checked nodes
+[CHECKBOX] 3 nodes are checked: Desktop, Notes, Commands
+[TEST3] Total checked nodes: 3
+[TEST3] ✓ Individual nodes selected successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test4 - CHECKBOX: uncheck individual nodes" classname="checkBoxes.spec.ts" time="1.374">
+<system-out>
+<![CDATA[[TEST4] Verifying individual checkbox deselection
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] All nodes expanded
+[CHECKBOX] Checking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is already checked
+[CHECKBOX] Checking node "Notes"
+[CHECKBOX] Checking if node "Notes" is checked
+[CHECKBOX] Node "Notes" is checked
+[CHECKBOX] Node "Notes" is already checked
+[TEST4] Verified nodes are checked
+[TEST4] Unchecking "Desktop"
+[CHECKBOX] Unchecking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is checked
+[CHECKBOX] Node "Desktop" unchecked
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[CHECKBOX] Checking if node "Notes" is checked
+[CHECKBOX] Node "Notes" is unchecked
+[TEST4] After unchecking Desktop: Desktop=false, Notes=false
+[TEARDOWN] Closing browser context
+
+[[ATTACHMENT|..\test-results\checkboxes\checkBoxes-CHECKBOX-Hierar-0bad2-OX-uncheck-individual-nodes-chrome\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\checkboxes\checkBoxes-CHECKBOX-Hierar-0bad2-OX-uncheck-individual-nodes-chrome\error-context.md]]
+
+[[ATTACHMENT|..\test-results\checkboxes\checkBoxes-CHECKBOX-Hierar-0bad2-OX-uncheck-individual-nodes-chrome\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [chrome] › checkBoxes.spec.ts:153:7 › CHECKBOX: Hierarchical tree selection with parent-child relationships › test4 - CHECKBOX: uncheck individual nodes 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      178 |
+      179 |     expect(desktopChecked).toBe(false);
+    > 180 |     expect(notesChecked).toBe(true);
+          |                          ^
+      181 |
+      182 |     console.log('[TEST4] ✓ Individual nodes deselected successfully');
+      183 |   });
+        at C:\DemoQA-Playwright\tests\checkBoxes.spec.ts:180:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\checkboxes\checkBoxes-CHECKBOX-Hierar-0bad2-OX-uncheck-individual-nodes-chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\checkboxes\checkBoxes-CHECKBOX-Hierar-0bad2-OX-uncheck-individual-nodes-chrome\error-context.md
+
+    Error Context: ..\test-results\checkboxes\checkBoxes-CHECKBOX-Hierar-0bad2-OX-uncheck-individual-nodes-chrome\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test5 - CHECKBOX: toggle individual nodes" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test6 - HIERARCHY: selecting parent should check all its children" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test7 - HIERARCHY: selecting all children should check parent" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test8 - HIERARCHY: unchecking child should uncheck parent" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test9 - MIXED: complex selection scenario with multiple branches" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test10 - MIXED: clear all selections" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test11 - STATE: get node info with all properties" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test12 - STATE: verify has selected nodes after selection" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>

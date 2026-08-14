@@ -1,0 +1,18 @@
+
+# Playwright
+node_modules/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/test-results/**/.pw-tmp/
+
+# Environment files
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json

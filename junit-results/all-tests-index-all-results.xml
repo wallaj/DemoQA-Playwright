@@ -1,0 +1,226 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="25.628465000000013">
+<testsuite name="checkBoxes.spec.ts" timestamp="2026-08-12T21:03:56.266Z" hostname="chrome" tests="2" failures="0" skipped="0" time="15.377" errors="0">
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test9 - MIXED: complex selection scenario with multiple branches" classname="checkBoxes.spec.ts" time="8.906">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for checkbox tests
+[SETUP] Navigating to Checkbox page
+[CHECKBOX] Navigating to checkbox page
+[CHECKBOX] Checkbox page loaded successfully
+[SETUP] Checkbox page initialized and ready
+[TEST9] Running complex mixed selection scenario
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] All nodes expanded
+[CHECKBOX] Clearing all selections
+[CHECKBOX] Getting list of checked nodes
+[CHECKBOX] 0 nodes are checked: 
+[CHECKBOX] All selections cleared
+[TEST9] Step 1: verifying clean slate...
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[TEST9] "Desktop" expected=false, actual=false
+[CHECKBOX] Checking if node "Downloads" is checked
+[CHECKBOX] Node "Downloads" is unchecked
+[TEST9] "Downloads" expected=false, actual=false
+[CHECKBOX] Checking if node "Word File.doc" is checked
+[CHECKBOX] Node "Word File.doc" is unchecked
+[TEST9] "Word File.doc" expected=false, actual=false
+[CHECKBOX] Checking if node "Excel File.doc" is checked
+[CHECKBOX] Node "Excel File.doc" is unchecked
+[TEST9] "Excel File.doc" expected=false, actual=false
+[CHECKBOX] Checking if node "WorkSpace" is checked
+[CHECKBOX] Node "WorkSpace" is unchecked
+[TEST9] "WorkSpace" expected=false, actual=false
+[CHECKBOX] Checking if node "Office" is checked
+[CHECKBOX] Node "Office" is unchecked
+[TEST9] "Office" expected=false, actual=false
+[CHECKBOX] Checking if node "General" is checked
+[CHECKBOX] Node "General" is unchecked
+[TEST9] "General" expected=false, actual=false
+[TEST9] Step 2: making selections across independent branches...
+[TEST9] Checking "Desktop"
+[CHECKBOX] Checking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[CHECKBOX] Node "Desktop" checked
+[TEST9] Checking "WorkSpace"
+[CHECKBOX] Checking node "WorkSpace"
+[CHECKBOX] Checking if node "WorkSpace" is checked
+[CHECKBOX] Node "WorkSpace" is unchecked
+[CHECKBOX] Node "WorkSpace" checked
+[TEST9] Checking "Downloads"
+[CHECKBOX] Checking node "Downloads"
+[CHECKBOX] Checking if node "Downloads" is checked
+[CHECKBOX] Node "Downloads" is unchecked
+[CHECKBOX] Node "Downloads" checked
+[TEST9] Checking "General"
+[CHECKBOX] Checking node "General"
+[CHECKBOX] Checking if node "General" is checked
+[CHECKBOX] Node "General" is unchecked
+[CHECKBOX] Node "General" checked
+[TEST9] Step 2: verifying cascade check and branch isolation...
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is checked
+[TEST9] "Desktop" expected=true, actual=true
+[CHECKBOX] Checking if node "WorkSpace" is checked
+[CHECKBOX] Node "WorkSpace" is checked
+[TEST9] "WorkSpace" expected=true, actual=true
+[CHECKBOX] Checking if node "General" is checked
+[CHECKBOX] Node "General" is checked
+[TEST9] "General" expected=true, actual=true
+[CHECKBOX] Checking if node "Downloads" is checked
+[CHECKBOX] Node "Downloads" is checked
+[TEST9] "Downloads" expected=true, actual=true
+[CHECKBOX] Checking if node "Word File.doc" is checked
+[CHECKBOX] Node "Word File.doc" is checked
+[TEST9] "Word File.doc" expected=true, actual=true
+[CHECKBOX] Checking if node "Excel File.doc" is checked
+[CHECKBOX] Node "Excel File.doc" is checked
+[TEST9] "Excel File.doc" expected=true, actual=true
+[CHECKBOX] Checking if node "Office" is checked
+[CHECKBOX] Node "Office" is unchecked
+[TEST9] "Office" expected=false, actual=false
+[TEST9] Step 3: unchecking Downloads to validate cascade deselection...
+[CHECKBOX] Unchecking node "Downloads"
+[CHECKBOX] Checking if node "Downloads" is checked
+[CHECKBOX] Node "Downloads" is checked
+[CHECKBOX] Node "Downloads" unchecked
+[TEST9] Step 3: verifying cascade uncheck and branch isolation...
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is checked
+[TEST9] "Desktop" expected=true, actual=true
+[CHECKBOX] Checking if node "WorkSpace" is checked
+[CHECKBOX] Node "WorkSpace" is checked
+[TEST9] "WorkSpace" expected=true, actual=true
+[CHECKBOX] Checking if node "General" is checked
+[CHECKBOX] Node "General" is checked
+[TEST9] "General" expected=true, actual=true
+[CHECKBOX] Checking if node "Downloads" is checked
+[CHECKBOX] Node "Downloads" is unchecked
+[TEST9] "Downloads" expected=false, actual=false
+[CHECKBOX] Checking if node "Word File.doc" is checked
+[CHECKBOX] Node "Word File.doc" is unchecked
+[TEST9] "Word File.doc" expected=false, actual=false
+[CHECKBOX] Checking if node "Excel File.doc" is checked
+[CHECKBOX] Node "Excel File.doc" is unchecked
+[TEST9] "Excel File.doc" expected=false, actual=false
+[CHECKBOX] Checking if node "Office" is checked
+[CHECKBOX] Node "Office" is unchecked
+[TEST9] "Office" expected=false, actual=false
+[TEST9] ✓ Complex selection scenario completed successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test10 - MIXED: clear all selections" classname="checkBoxes.spec.ts" time="6.471">
+<system-out>
+<![CDATA[[TEST10] Verifying clear all selections functionality
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] All nodes expanded
+[TEST10] Checking 4 nodes
+[CHECKBOX] Checking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is already checked
+[CHECKBOX] Checking node "Documents"
+[CHECKBOX] Checking if node "Documents" is checked
+[CHECKBOX] Node "Documents" is unchecked
+[CHECKBOX] Node "Documents" checked
+[CHECKBOX] Checking node "Downloads"
+[CHECKBOX] Checking if node "Downloads" is checked
+[CHECKBOX] Node "Downloads" is unchecked
+[CHECKBOX] Node "Downloads" checked
+[CHECKBOX] Checking node "Public"
+[CHECKBOX] Checking if node "Public" is checked
+[CHECKBOX] Node "Public" is checked
+[CHECKBOX] Node "Public" is already checked
+[CHECKBOX] Getting list of checked nodes
+[CHECKBOX] 17 nodes are checked: Home, Desktop, Notes, Commands, Documents, WorkSpace, React, Angular, Veu, Office, Public, Private, Classified, General, Downloads, Word File.doc, Excel File.doc
+[TEST10] Before clear: 17 nodes checked
+[TEST10] Clearing all selections
+[CHECKBOX] Clearing all selections
+[CHECKBOX] Getting list of checked nodes
+[CHECKBOX] 17 nodes are checked: Home, Desktop, Notes, Commands, Documents, WorkSpace, React, Angular, Veu, Office, Public, Private, Classified, General, Downloads, Word File.doc, Excel File.doc
+[CHECKBOX] Unchecking node "Home"
+[CHECKBOX] Checking if node "Home" is checked
+[CHECKBOX] Node "Home" is checked
+[CHECKBOX] Node "Home" unchecked
+[CHECKBOX] Unchecking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[CHECKBOX] Node "Desktop" is already unchecked
+[CHECKBOX] Unchecking node "Notes"
+[CHECKBOX] Checking if node "Notes" is checked
+[CHECKBOX] Node "Notes" is unchecked
+[CHECKBOX] Node "Notes" is already unchecked
+[CHECKBOX] Unchecking node "Commands"
+[CHECKBOX] Checking if node "Commands" is checked
+[CHECKBOX] Node "Commands" is unchecked
+[CHECKBOX] Node "Commands" is already unchecked
+[CHECKBOX] Unchecking node "Documents"
+[CHECKBOX] Checking if node "Documents" is checked
+[CHECKBOX] Node "Documents" is unchecked
+[CHECKBOX] Node "Documents" is already unchecked
+[CHECKBOX] Unchecking node "WorkSpace"
+[CHECKBOX] Checking if node "WorkSpace" is checked
+[CHECKBOX] Node "WorkSpace" is unchecked
+[CHECKBOX] Node "WorkSpace" is already unchecked
+[CHECKBOX] Unchecking node "React"
+[CHECKBOX] Checking if node "React" is checked
+[CHECKBOX] Node "React" is unchecked
+[CHECKBOX] Node "React" is already unchecked
+[CHECKBOX] Unchecking node "Angular"
+[CHECKBOX] Checking if node "Angular" is checked
+[CHECKBOX] Node "Angular" is unchecked
+[CHECKBOX] Node "Angular" is already unchecked
+[CHECKBOX] Unchecking node "Veu"
+[CHECKBOX] Checking if node "Veu" is checked
+[CHECKBOX] Node "Veu" is unchecked
+[CHECKBOX] Node "Veu" is already unchecked
+[CHECKBOX] Unchecking node "Office"
+[CHECKBOX] Checking if node "Office" is checked
+[CHECKBOX] Node "Office" is unchecked
+[CHECKBOX] Node "Office" is already unchecked
+[CHECKBOX] Unchecking node "Public"
+[CHECKBOX] Checking if node "Public" is checked
+[CHECKBOX] Node "Public" is unchecked
+[CHECKBOX] Node "Public" is already unchecked
+[CHECKBOX] Unchecking node "Private"
+[CHECKBOX] Checking if node "Private" is checked
+[CHECKBOX] Node "Private" is unchecked
+[CHECKBOX] Node "Private" is already unchecked
+[CHECKBOX] Unchecking node "Classified"
+[CHECKBOX] Checking if node "Classified" is checked
+[CHECKBOX] Node "Classified" is unchecked
+[CHECKBOX] Node "Classified" is already unchecked
+[CHECKBOX] Unchecking node "General"
+[CHECKBOX] Checking if node "General" is checked
+[CHECKBOX] Node "General" is unchecked
+[CHECKBOX] Node "General" is already unchecked
+[CHECKBOX] Unchecking node "Downloads"
+[CHECKBOX] Checking if node "Downloads" is checked
+[CHECKBOX] Node "Downloads" is unchecked
+[CHECKBOX] Node "Downloads" is already unchecked
+[CHECKBOX] Unchecking node "Word File.doc"
+[CHECKBOX] Checking if node "Word File.doc" is checked
+[CHECKBOX] Node "Word File.doc" is unchecked
+[CHECKBOX] Node "Word File.doc" is already unchecked
+[CHECKBOX] Unchecking node "Excel File.doc"
+[CHECKBOX] Checking if node "Excel File.doc" is checked
+[CHECKBOX] Node "Excel File.doc" is unchecked
+[CHECKBOX] Node "Excel File.doc" is already unchecked
+[CHECKBOX] All selections cleared
+[CHECKBOX] Getting list of checked nodes
+[CHECKBOX] 0 nodes are checked: 
+[TEST10] After clear: 0 nodes checked
+[TEST10] ✓ Clear all selections works correctly
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

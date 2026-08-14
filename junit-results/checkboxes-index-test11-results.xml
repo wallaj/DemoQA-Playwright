@@ -1,0 +1,31 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="14.937863000000013">
+<testsuite name="checkBoxes.spec.ts" timestamp="2026-08-14T15:49:57.580Z" hostname="chrome" tests="1" failures="0" skipped="0" time="4.831" errors="0">
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test11 - STATE: get node info with all properties" classname="checkBoxes.spec.ts" time="4.831">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for checkbox tests
+[SETUP] Navigating to Checkbox page
+[CHECKBOX] Navigating to checkbox page
+[CHECKBOX] Checkbox page loaded successfully
+[SETUP] Checkbox page initialized and ready
+[TEST11] Getting detailed node information
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] All nodes expanded
+[CHECKBOX] Checking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[CHECKBOX] Node "Desktop" checked
+[CHECKBOX] Getting detailed info for node "Desktop"
+[TEST11] Node info for "Desktop": {"label":"Desktop","checked":true,"expanded":true,"hasChildren":true}
+[TEST11] ✓ Node info retrieved successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

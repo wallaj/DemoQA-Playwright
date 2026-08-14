@@ -1,0 +1,49 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="16.501330000000017">
+<testsuite name="checkBoxes.spec.ts" timestamp="2026-08-14T15:47:10.386Z" hostname="chrome" tests="1" failures="0" skipped="0" time="3.77" errors="0">
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test4 - CHECKBOX: uncheck individual nodes" classname="checkBoxes.spec.ts" time="3.77">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for checkbox tests
+[SETUP] Navigating to Checkbox page
+[CHECKBOX] Navigating to checkbox page
+[CHECKBOX] Checkbox page loaded successfully
+[SETUP] Checkbox page initialized and ready
+[TEST4] Verifying individual checkbox deselection
+[CHECKBOX] Expanding all tree nodes
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 3 collapsed nodes, expanding...
+[CHECKBOX] Found 2 collapsed nodes, expanding...
+[CHECKBOX] Found 1 collapsed nodes, expanding...
+[CHECKBOX] All nodes expanded
+[CHECKBOX] Clearing all selections
+[CHECKBOX] Getting list of checked nodes
+[CHECKBOX] 0 nodes are checked: 
+[CHECKBOX] All selections cleared
+[TEST4] Checking node "Desktop"
+[CHECKBOX] Checking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[CHECKBOX] Node "Desktop" checked
+[TEST4] Checking node "Public"
+[CHECKBOX] Checking node "Public"
+[CHECKBOX] Checking if node "Public" is checked
+[CHECKBOX] Node "Public" is unchecked
+[CHECKBOX] Node "Public" checked
+[TEST4] Unchecking "Desktop"
+[CHECKBOX] Unchecking node "Desktop"
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is checked
+[CHECKBOX] Node "Desktop" unchecked
+[CHECKBOX] Checking if node "Desktop" is checked
+[CHECKBOX] Node "Desktop" is unchecked
+[CHECKBOX] Checking if node "Public" is checked
+[CHECKBOX] Node "Public" is checked
+[TEST4] After unchecking Desktop: Desktop=false, Public=true
+[TEST4] ✓ Individual nodes deselected successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
