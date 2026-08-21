@@ -1,0 +1,28 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="16.778369999999878">
+<testsuite name="radioButtons.spec.ts" timestamp="2026-08-21T13:05:09.103Z" hostname="chrome" tests="3" failures="0" skipped="0" time="4.412" errors="0">
+<testcase name="Radio Button selection › test1 - RADIO BUTTON: select Yes and verify response" classname="radioButtons.spec.ts" time="1.207">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for radio button tests
+[SETUP] Navigating to the Radio Button page
+[TEST1] Selecting the enabled "Yes" radio button
+[TEST1] Yes selected and response verified
+]]>
+</system-out>
+</testcase>
+<testcase name="Radio Button selection › test2 - RADIO BUTTON: select Impressive and verify response" classname="radioButtons.spec.ts" time="1.145">
+<system-out>
+<![CDATA[[TEST2] Selecting the enabled "Impressive" radio button
+[TEST2] Impressive selected and response verified
+]]>
+</system-out>
+</testcase>
+<testcase name="Radio Button selection › test3 - RADIO BUTTON: verify No is disabled" classname="radioButtons.spec.ts" time="2.06">
+<system-out>
+<![CDATA[[TEST3] Verifying the disabled "No" radio button
+[TEST3] No is disabled and cannot be selected
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
