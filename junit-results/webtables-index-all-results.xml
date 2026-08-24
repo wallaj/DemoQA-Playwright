@@ -1,0 +1,141 @@
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="75.13282300001383">
+<testsuite name="webTables.spec.ts" timestamp="2026-08-24T19:59:03.617Z" hostname="chrome" tests="6" failures="0" skipped="0" time="65.581" errors="0">
+<testcase name="WEB TABLES: table controls and record management › test1 - ADD BUTTON: opens registration form modal with correct fields" classname="webTables.spec.ts" time="7.528">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for web tables tests
+[SETUP] Navigating to the Web Tables page
+[TEST1] Verifying the Add button and the registration form modal it opens
+[TEST1] Opening the registration form modal
+[TEST1] Verifying each field label and placeholder
+[TEST1] Checking field "First Name"
+[TEST1] "First Name" is visible and the label was verified
+[TEST1] "First Name" the placeholder was verified
+[TEST1] Checking field "Last Name"
+[TEST1] "Last Name" is visible and the label was verified
+[TEST1] "Last Name" the placeholder was verified
+[TEST1] Checking field "Email"
+[TEST1] "Email" is visible and the label was verified
+[TEST1] "Email" the placeholder was verified
+[TEST1] Checking field "Age"
+[TEST1] "Age" is visible and the label was verified
+[TEST1] "Age" the placeholder was verified
+[TEST1] Checking field "Salary"
+[TEST1] "Salary" is visible and the label was verified
+[TEST1] "Salary" the placeholder was verified
+[TEST1] Checking field "Department"
+[TEST1] "Department" is visible and the label was verified
+[TEST1] "Department" the placeholder was verified
+[TEST1] ✓ Add button and registration form modal verified successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test2 - NEW RECORD: submits a new record and validates it in the table" classname="webTables.spec.ts" time="9.875">
+<system-out>
+<![CDATA[[TEST2] Filling the registration form and submitting a new record
+[TEST2] Filling First Name and Last Name
+[TEST2] "Email": entering invalid value "invalid-email-format"
+[TEST2] "Email": browser rejected the invalid value = true
+[TEST2] "Email": clearing the rejected value
+[TEST2] "Email": entering valid value "marcos.urzua@example.com"
+[TEST2] "Email": browser accepted the valid value = true
+[TEST2] "Age": entering invalid value "9a"
+[TEST2] "Age": browser rejected the invalid value = true
+[TEST2] "Age": clearing the rejected value
+[TEST2] "Age": entering valid value "32"
+[TEST2] "Age": browser accepted the valid value = true
+[TEST2] "Salary": entering invalid value "12a34"
+[TEST2] "Salary": browser rejected the invalid value = true
+[TEST2] "Salary": clearing the rejected value
+[TEST2] "Salary": entering valid value "75000"
+[TEST2] "Salary": browser accepted the valid value = true
+[TEST2] Filling Department
+[TEST2] Submitting the registration form
+[TEST2] Modal closed after a successful submit
+[TEST2] Locating the new row by First Name and validating every field
+[TEST2] Data found in the saved row: {"firstName":"Marcos","lastName":"Urzua","age":"32","email":"marcos.urzua@example.com","salary":"75000","department":"QA"}
+[TEST2] New row found and every field matches the submitted data
+[TEST2] ✓ New record submitted and verified in the table successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test3 - MASSIVE RECORD: bulk loads 40 records and validates the total count" classname="webTables.spec.ts" time="15.946">
+<system-out>
+<![CDATA[[TEST3] Counting pre-existing records before the bulk load
+[TEST3] Records found before bulk load: 4
+[TEST3] Generated 40 records for the bulk load
+[TEST3] Submitting every generated record through the Add flow
+[TEST3] Bulk load finished
+[TEST3] Counting total records after the bulk load
+[TEST3] Records found after bulk load: 44 (expected 4 + 40 = 44)
+[TEST3] Next button is disabled because all rows fit on a single page (50 rows max)
+[TEST3] ✓ Bulk load completed and total record count verified successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test4 - PAGINATION: validates selector options and page navigation buttons" classname="webTables.spec.ts" time="13.411">
+<system-out>
+<![CDATA[[TEST4] Starting pagination validation after the TEST3 bulk load
+[TEST4] Scrolling down to the pagination selector
+[TEST4] Default rows-per-page value found: 50
+[TEST4] Total rows available for pagination: 44
+[TEST4] Validating initial button state at 50 rows per page
+[TEST4] Validating selector option: 50 rows per page
+[TEST4] Selector value 50: 44 / 50 = 1 | current page summary 1 of 1
+[TEST4] Validating selector option: 40 rows per page
+[TEST4] Selector value 40: 44 / 40 = 2 | current page summary 1 of 2
+[TEST4] Validating selector option: 30 rows per page
+[TEST4] Selector value 30: 44 / 30 = 2 | current page summary 1 of 2
+[TEST4] Validating selector option: 20 rows per page
+[TEST4] Selector value 20: 44 / 20 = 3 | current page summary 1 of 3
+[TEST4] Validating selector option: 10 rows per page
+[TEST4] Selector value 10: 44 / 10 = 5 | current page summary 1 of 5
+[TEST4] Finished selector validation at 10 rows per page; now validating page navigation buttons
+[TEST4] Validating page 1 button state before navigation
+[TEST4] Clicking Next
+[TEST4] After clicking Next: page summary is 2 of 5
+[TEST4] Clicking Last
+[TEST4] After clicking Last: page summary is 5 of 5
+[TEST4] Clicking First
+[TEST4] After clicking First: page summary is 1 of 5
+[TEST4] Validating Previous remains disabled on page 1
+[TEST4] ✓ Selector values and pagination buttons verified successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test5 - SEARCH BOX: filters records by letters, numbers, and no-match text" classname="webTables.spec.ts" time="7.967">
+<system-out>
+<![CDATA[[TEST5] Starting independent search-box validation
+[TEST5] Reloading the Web Tables page to reset the table state
+[TEST5] Filtering records by letters using the term "Cierra"
+[TEST5] Letter filter returned the expected record
+[TEST5] Clearing the letter filter
+[TEST5] Filtering records by numbers using the term "10000"
+[TEST5] Numeric filter returned the expected record
+[TEST5] Clearing the numeric filter
+[TEST5] Filtering with a non-existing word
+[TEST5] No-match pagination state: page 1 of 0
+[TEST5] Non-existing word returned the expected empty-results state
+[TEST5] ✓ Search box filters verified successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test6 - EDIT AND DELETE: updates a record and removes it from the table" classname="webTables.spec.ts" time="10.854">
+<system-out>
+<![CDATA[[TEST6] Starting independent edit and delete validation
+[TEST6] Reloading the Web Tables page to reset the table state
+[TEST6] Records found before editing and deleting: 3
+[TEST6] Existing row selected for edit: {"firstName":"Cierra","lastName":"Vega","age":"39","email":"cierra@example.com","salary":"10000","department":"Insurance"}
+[TEST6] Opening the Edit modal for the selected existing record
+[TEST6] Edit modal opened with the selected row data
+[TEST6] Updating the selected record and submitting the modal
+[TEST6] Updated row data: {"firstName":"CierraEdited","lastName":"VegaUpdated","age":"40","email":"cierra.edited@example.com","salary":"12000","department":"Automation QA"}
+[TEST6] Edited record was persisted correctly
+[TEST6] Clicking the visible Trash icon for the edited record
+[TEST6] Records found after deleting the edited row: 2
+[TEST6] ✓ Edit and delete actions verified successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

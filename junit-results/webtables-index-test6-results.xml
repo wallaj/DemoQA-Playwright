@@ -1,0 +1,24 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="18.918388000011443">
+<testsuite name="webTables.spec.ts" timestamp="2026-08-24T19:56:38.810Z" hostname="chrome" tests="1" failures="0" skipped="0" time="11.043" errors="0">
+<testcase name="WEB TABLES: table controls and record management › test6 - EDIT AND DELETE: updates a record and removes it from the table" classname="webTables.spec.ts" time="11.043">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for web tables tests
+[SETUP] Navigating to the Web Tables page
+[TEST6] Starting independent edit and delete validation
+[TEST6] Reloading the Web Tables page to reset the table state
+[TEST6] Records found before editing and deleting: 3
+[TEST6] Existing row selected for edit: {"firstName":"Cierra","lastName":"Vega","age":"39","email":"cierra@example.com","salary":"10000","department":"Insurance"}
+[TEST6] Opening the Edit modal for the selected existing record
+[TEST6] Edit modal opened with the selected row data
+[TEST6] Updating the selected record and submitting the modal
+[TEST6] Updated row data: {"firstName":"CierraEdited","lastName":"VegaUpdated","age":"40","email":"cierra.edited@example.com","salary":"12000","department":"Automation QA"}
+[TEST6] Edited record was persisted correctly
+[TEST6] Clicking the visible Trash icon for the edited record
+[TEST6] Records found after deleting the edited row: 2
+[TEST6] ✓ Edit and delete actions verified successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

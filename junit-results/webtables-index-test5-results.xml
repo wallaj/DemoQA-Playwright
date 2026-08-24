@@ -1,0 +1,24 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="21.021056999981404">
+<testsuite name="webTables.spec.ts" timestamp="2026-08-24T19:39:14.626Z" hostname="chrome" tests="1" failures="0" skipped="0" time="8.738" errors="0">
+<testcase name="WEB TABLES: table controls and record management › test5 - SEARCH BOX: filters records by letters, numbers, and no-match text" classname="webTables.spec.ts" time="8.738">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for web tables tests
+[SETUP] Navigating to the Web Tables page
+[TEST5] Starting independent search-box validation
+[TEST5] Reloading the Web Tables page to reset the table state
+[TEST5] Filtering records by letters using the term "Cierra"
+[TEST5] Letter filter returned the expected record
+[TEST5] Clearing the letter filter
+[TEST5] Filtering records by numbers using the term "10000"
+[TEST5] Numeric filter returned the expected record
+[TEST5] Clearing the numeric filter
+[TEST5] Filtering with a non-existing word
+[TEST5] No-match pagination state: page 1 of 0
+[TEST5] Non-existing word returned the expected empty-results state
+[TEST5] ✓ Search box filters verified successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

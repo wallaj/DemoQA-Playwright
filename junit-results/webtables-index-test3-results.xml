@@ -1,0 +1,21 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="27.63566100001335">
+<testsuite name="webTables.spec.ts" timestamp="2026-08-24T19:13:15.248Z" hostname="chrome" tests="1" failures="0" skipped="0" time="15.687" errors="0">
+<testcase name="WEB TABLES: table controls and record management › test3 - MASSIVE RECORD: bulk loads 40 records and validates the total count" classname="webTables.spec.ts" time="15.687">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for web tables tests
+[SETUP] Navigating to the Web Tables page
+[TEST3] Counting pre-existing records before the bulk load
+[TEST3] Records found before bulk load: 3
+[TEST3] Generated 40 records for the bulk load
+[TEST3] Submitting every generated record through the Add flow
+[TEST3] Bulk load finished
+[TEST3] Counting total records after the bulk load
+[TEST3] Records found after bulk load: 43 (expected 3 + 40 = 43)
+[TEST3] Next button is disabled because all rows fit on a single page (50 rows max)
+[TEST3] ✓ Bulk load completed and total record count verified successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
