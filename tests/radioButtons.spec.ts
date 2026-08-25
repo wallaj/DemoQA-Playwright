@@ -14,6 +14,8 @@ import { pauseOneSecond } from '../utils/wait.utils';
  *
  * Out of scope: Selecting more than one radio button at a time and browser-native
  * radio implementation details.
+ * 
+ * Author: Marcos Urzúa
  */
 let sharedPage: Page;
 let radioButtonPage: RadioButtonPage;

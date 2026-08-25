@@ -5,6 +5,8 @@ import { pauseOneSecond } from '../utils/wait.utils';
 /**
  * Smoke test to verify the DemoQA Text Box page works correctly.
  * Serves as a baseline to confirm the project setup is functional.
+ * 
+ * Author: Marcos Urzúa
  */
 test.describe('HTML elements - Text Box, Check Box, Radio Button, Web Tables, Buttons, Links, Broken Links - Images, Upload and Download', () => {
   let textBoxPage: TextBoxPage;
@@ -22,7 +24,7 @@ test.describe('HTML elements - Text Box, Check Box, Radio Button, Web Tables, Bu
 
   test('TEXT BOX: should submit form and display output correctly', async ({ page }) => {
     // Fill the form with test data and submit
-    console.log('[TEST] Filling the form with test data');
+    console.log('[TEST 1] Filling the form with test data');
     // Fill the form with test data
     await textBoxPage.fillForm({
       fullName: 'John Doe',

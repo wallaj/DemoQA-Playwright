@@ -1,0 +1,20 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="20.10611100000143">
+<testsuite name="buttons.spec.ts" timestamp="2026-08-25T13:00:50.413Z" hostname="chrome" tests="1" failures="0" skipped="0" time="4.488" errors="0">
+<testcase name="BUTTONS: double click, right click, and regular click › test1 - BUTTONS: validates double click, right click, and regular click" classname="buttons.spec.ts" time="4.488">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for buttons tests
+[SETUP] Navigating to the Buttons page
+[TEST1] Verifying the three Buttons page actions
+[TEST1] Performing Double Click Me action
+[TEST1] Double click message verified
+[TEST1] Performing Right Click Me action
+[TEST1] Right click message verified
+[TEST1] Performing Click Me action
+[TEST1] Regular click message verified
+[TEST1] ✓ All Buttons page actions verified successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
