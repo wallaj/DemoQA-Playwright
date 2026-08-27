@@ -1,0 +1,39 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="29.647035000026225">
+<testsuite name="links.spec.ts" timestamp="2026-08-27T14:38:43.578Z" hostname="chrome" tests="2" failures="0" skipped="0" time="16.532" errors="0">
+<testcase name="LINKS: external navigation and API response links › test1 - EXTERNAL LINKS: opens the DemoQA home page in a new tab" classname="links.spec.ts" time="4.266">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for links tests
+[SETUP] Navigating to the Links page
+[TEST1] Verifying the external navigation links
+[TEST1] Opening the Home link
+[TEST1] Home opened URL: https://demoqa.com/
+[TEST1] Opening the Dynamic Home link
+[TEST1] Dynamic Home opened URL: https://demoqa.com/
+[TEST1] ✓ Both external navigation links opened the DemoQA home page successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="LINKS: external navigation and API response links › test2 - API LINKS: displays the expected status code and text" classname="links.spec.ts" time="12.266">
+<system-out>
+<![CDATA[[TEST2] Verifying every API response link and its dynamic label
+[TEST2] Requesting Created: expected 201 Created
+[TEST2] Response verified: Link has responded with staus 201 and status text Created
+[TEST2] Requesting No Content: expected 204 No Content
+[TEST2] Response verified: Link has responded with staus 204 and status text No Content
+[TEST2] Requesting Moved: expected 301 Moved Permanently
+[TEST2] Response verified: Link has responded with staus 301 and status text Moved Permanently
+[TEST2] Requesting Bad Request: expected 400 Bad Request
+[TEST2] Response verified: Link has responded with staus 400 and status text Bad Request
+[TEST2] Requesting Unauthorized: expected 401 Unauthorized
+[TEST2] Response verified: Link has responded with staus 401 and status text Unauthorized
+[TEST2] Requesting Forbidden: expected 403 Forbidden
+[TEST2] Response verified: Link has responded with staus 403 and status text Forbidden
+[TEST2] Requesting Not Found: expected 404 Not Found
+[TEST2] Response verified: Link has responded with staus 404 and status text Not Found
+[TEST2] ✓ All API response links returned their expected status labels successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
