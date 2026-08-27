@@ -1,0 +1,20 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="15.42138700002432">
+<testsuite name="uploadsDownloads.spec.ts" timestamp="2026-08-27T15:28:31.314Z" hostname="chrome" tests="1" failures="0" skipped="0" time="3.159" errors="0">
+<testcase name="UPLOAD AND DOWNLOAD: sample file transfer › test1 - UPLOAD AND DOWNLOAD: downloads Sample File and uploads it back" classname="uploadsDownloads.spec.ts" time="3.159">
+<system-out>
+<![CDATA[[SETUP] Starting browser context for upload and download tests
+[SETUP] Navigating to the Upload and Download page
+[TEST1] Starting Sample File download and upload validation
+[TEST1] Using the system Downloads folder: C:\Users\marcos.urzua\Downloads
+[TEST1] Downloading Sample File
+[TEST1] Browser suggested file name: sampleFile.jpeg
+[TEST1] Sample File saved in the system Downloads folder: C:\Users\marcos.urzua\Downloads\sampleFile.jpeg
+[TEST1] Uploading the downloaded Sample File
+[TEST1] Upload result: C:\fakepath\sampleFile.jpeg
+[TEST1] ✓ Sample File was downloaded into the system Downloads folder and uploaded successfully
+[TEARDOWN] Closing browser context
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
