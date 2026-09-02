@@ -1,0 +1,19 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="8.422292">
+<testsuite name="account.api.spec.ts" timestamp="2026-09-02T21:13:32.305Z" hostname="api" tests="1" failures="0" skipped="0" time="5.168" errors="0">
+<testcase name="ACCOUNT API: user lifecycle › test4 - GET USER: returns an existing authenticated account" classname="account.api.spec.ts" time="5.168">
+<system-out>
+<![CDATA[[TEST4] Creating prerequisite API user: api_9d79091fde81
+[TEST4] Generating the token required to get the user
+[TEST4] GET endpoint: /Account/v1/User/f0749321-80de-4333-bfde-577cae253c15
+[TEST4] Get User response status: 200
+[TEST4] Returned user: api_9d79091fde81, userID: f0749321-80de-4333-bfde-577cae253c15, 
+      books: []
+[TEST4] ✓ Authenticated user returned successfully
+[TEARDOWN] DELETE endpoint: /Account/v1/User/f0749321-80de-4333-bfde-577cae253c15
+[TEARDOWN] Deleting test user: api_9d79091fde81, userID: f0749321-80de-4333-bfde-577cae253c15
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

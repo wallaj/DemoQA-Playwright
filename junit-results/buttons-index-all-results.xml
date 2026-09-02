@@ -1,20 +1,124 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="20.10611100000143">
-<testsuite name="buttons.spec.ts" timestamp="2026-08-25T13:00:50.413Z" hostname="chrome" tests="1" failures="0" skipped="0" time="4.488" errors="0">
-<testcase name="BUTTONS: double click, right click, and regular click › test1 - BUTTONS: validates double click, right click, and regular click" classname="buttons.spec.ts" time="4.488">
-<system-out>
-<![CDATA[[SETUP] Starting browser context for buttons tests
-[SETUP] Navigating to the Buttons page
-[TEST1] Verifying the three Buttons page actions
-[TEST1] Performing Double Click Me action
-[TEST1] Double click message verified
-[TEST1] Performing Right Click Me action
-[TEST1] Right click message verified
-[TEST1] Performing Click Me action
-[TEST1] Regular click message verified
-[TEST1] ✓ All Buttons page actions verified successfully
-[TEARDOWN] Closing browser context
-]]>
-</system-out>
+<testsuites id="" name="" tests="27" failures="0" skipped="27" errors="0" time="1.0864070000000001">
+<testsuite name="buttons.spec.ts" timestamp="2026-08-27T19:47:05.634Z" hostname="chrome" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="BUTTONS: double click, right click, and regular click › test1 - BUTTONS: validates double click, right click, and regular click" classname="buttons.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="checkBoxes.spec.ts" timestamp="2026-08-27T19:47:05.634Z" hostname="chrome" tests="13" failures="0" skipped="13" time="0" errors="0">
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test1 - TREE STRUCTURE: expand all nodes and display complete hierarchy" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test2 - TREE STRUCTURE: collapse all nodes" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test3 - CHECKBOX: check individual nodes independently" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test4 - CHECKBOX: uncheck individual nodes" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test5 - CHECKBOX: toggle individual nodes" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test6 - HIERARCHY: selecting parent should check all its children" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test7 - HIERARCHY: selecting all children should check parent" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test8 - HIERARCHY: unchecking child should uncheck parent" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test9 - MIXED: complex selection scenario with multiple branches" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test10 - MIXED: clear all selections" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test11 - STATE: get node info with all properties" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test12 - STATE: verify has selected nodes after selection" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="CHECKBOX: Hierarchical tree selection with parent-child relationships › test13 - TREE: recursively collect branches and node information" classname="checkBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="links.spec.ts" timestamp="2026-08-27T19:47:05.634Z" hostname="chrome" tests="2" failures="0" skipped="2" time="0" errors="0">
+<testcase name="LINKS: external navigation and API response links › test1 - EXTERNAL LINKS: opens the DemoQA home page in a new tab" classname="links.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="LINKS: external navigation and API response links › test2 - API LINKS: displays the expected status code and text" classname="links.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="radioButtons.spec.ts" timestamp="2026-08-27T19:47:05.634Z" hostname="chrome" tests="3" failures="0" skipped="3" time="0" errors="0">
+<testcase name="Radio Button selection › test1 - RADIO BUTTON: select Yes and verify response" classname="radioButtons.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Radio Button selection › test2 - RADIO BUTTON: select Impressive and verify response" classname="radioButtons.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Radio Button selection › test3 - RADIO BUTTON: verify No is disabled" classname="radioButtons.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="textBoxes.spec.ts" timestamp="2026-08-27T19:47:05.634Z" hostname="chrome" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="HTML elements - Text Box, Check Box, Radio Button, Web Tables, Buttons, Links, Broken Links - Images, Upload and Download › TEXT BOX: should submit form and display output correctly" classname="textBoxes.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="uploadsDownloads.spec.ts" timestamp="2026-08-27T19:47:05.634Z" hostname="chrome" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="UPLOAD AND DOWNLOAD: sample file transfer › test1 - UPLOAD AND DOWNLOAD: downloads Sample File and uploads it back" classname="uploadsDownloads.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="webTables.spec.ts" timestamp="2026-08-27T19:47:05.634Z" hostname="chrome" tests="6" failures="0" skipped="6" time="0" errors="0">
+<testcase name="WEB TABLES: table controls and record management › test1 - ADD BUTTON: opens registration form modal with correct fields" classname="webTables.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test2 - NEW RECORD: submits a new record and validates it in the table" classname="webTables.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test3 - MASSIVE RECORD: bulk loads 40 records and validates the total count" classname="webTables.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test4 - PAGINATION: validates selector options and page navigation buttons" classname="webTables.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test5 - SEARCH BOX: filters records by letters, numbers, and no-match text" classname="webTables.spec.ts">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="WEB TABLES: table controls and record management › test6 - EDIT AND DELETE: updates a record and removes it from the table" classname="webTables.spec.ts">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
 </testsuites>

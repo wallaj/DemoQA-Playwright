@@ -1,0 +1,16 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.792138000000035">
+<testsuite name="account.api.spec.ts" timestamp="2026-09-02T18:05:20.353Z" hostname="api" tests="1" failures="0" skipped="0" time="4.287" errors="0">
+<testcase name="ACCOUNT API: user lifecycle › test1 - CREATE USER: creates a valid account" classname="account.api.spec.ts" time="4.287">
+<system-out>
+<![CDATA[[TEST1] Creating unique API user: api_b095e658333c
+[TEST1] Create User response status: 201
+[TEST1] Created user ID: e989309e-1c80-4725-ba66-5d2cdc3f1eb9
+[TEST1] ✓ User account created with the expected response successfully
+[TEARDOWN] DELETE endpoint: /Account/v1/User/e989309e-1c80-4725-ba66-5d2cdc3f1eb9
+[TEARDOWN] Deleting test user: api_b095e658333c, userID: e989309e-1c80-4725-ba66-5d2cdc3f1eb9
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

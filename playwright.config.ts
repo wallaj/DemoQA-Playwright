@@ -18,6 +18,9 @@ function getSpecName(): string {
 
 const specName = getSpecName();
 
+// Naming convention that keeps API specs (no browser) and UI specs in separate projects.
+const API_SPEC_PATTERN = /.*\.api\.spec\.ts$/;
+
 // Reporters write here first; ReportSubfolderReporter renames this to
 // index-all / index-selection / index-<tag> once it knows what actually ran
 // (argv-based detection isn't reliable with VS Code's persistent test server).
@@ -62,6 +65,7 @@ export default defineConfig({
   projects: [
     {
       name: 'chrome',
+      testIgnore: API_SPEC_PATTERN, // Chrome is Chromium-based, so we can ignore API specs here.
       use: {
         channel: 'chrome',
         headless: false,
@@ -71,6 +75,7 @@ export default defineConfig({
     },
     {
       name: 'firefox',
+      testIgnore: API_SPEC_PATTERN, // Firefox is not Chromium-based, so we can ignore API specs here.
       use: {
         channel: 'firefox',
         headless: false,
@@ -80,6 +85,7 @@ export default defineConfig({
     },
     {
       name: 'edge',
+      testIgnore: API_SPEC_PATTERN, // Edge is Chromium-based, so we can ignore API specs here too.
       use: {
         channel: 'msedge',
         headless: false,
@@ -88,6 +94,15 @@ export default defineConfig({
         userAgent:
           'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0 OS/10.0.22631',
         permissions: ['local-network-access'],
+      },
+    },
+    {
+      // No browser is launched here: API specs only use the `request` fixture.
+      name: 'api',
+      testMatch: API_SPEC_PATTERN,
+      use: {
+        baseURL: 'https://demoqa.com',
+        extraHTTPHeaders: { 'Content-Type': 'application/json' },
       },
     },
   ],

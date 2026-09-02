@@ -1,0 +1,15 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.145391000000062">
+<testsuite name="account.api.spec.ts" timestamp="2026-09-02T17:58:26.918Z" hostname="api" tests="1" failures="0" skipped="0" time="7.174" errors="0">
+<testcase name="ACCOUNT API: user lifecycle › test3 - DELETE USER: deletes an existing authenticated account" classname="account.api.spec.ts" time="7.174">
+<system-out>
+<![CDATA[[TEST3] Creating prerequisite API user: api_e3d8602c0cb5
+[TEST3] Generating the token required to delete the user
+[TEST3] DELETE endpoint: /Account/v1/User/5378aa9f-0c98-47ad-b3cf-53748960204b
+[TEST3] Delete User response status: 204
+[TEST3] ✓ User account deleted successfully
+[TEARDOWN] No authenticated test user is available for cleanup
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

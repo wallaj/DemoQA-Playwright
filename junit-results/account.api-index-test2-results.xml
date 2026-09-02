@@ -1,0 +1,19 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="8.541185999999987">
+<testsuite name="account.api.spec.ts" timestamp="2026-09-02T17:52:04.326Z" hostname="api" tests="1" failures="0" skipped="0" time="5.595" errors="0">
+<testcase name="ACCOUNT API: user lifecycle › test2 - GENERATE TOKEN: returns a valid token for an existing user" classname="account.api.spec.ts" time="5.595">
+<system-out>
+<![CDATA[[TEST2] Creating prerequisite API user: api_ebdc9bd68e53
+[TEST2] Requesting an authentication token with valid credentials
+[TEST2] Generate Token response status: 200
+[TEST2] Token status: Success
+[TEST2] Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6ImFwaV9lYmRjOWJkNjhlNTMiLCJwYXNzd29yZCI6IkRlbW9RQUBlYmRjOWJkNjhlNTNBYTEiLCJpYXQiOjE3ODgzNzE1Mjh9.OR_sLaqcOOSb7ZJCCPhmSLd0A43WYpS3ChTwMm6N1g8
+[TEST2] Token expires: 2026-09-09T17:52:08.179Z
+[TEST2] Token status: Success
+[TEST2] ✓ Authentication token generated successfully
+[TEARDOWN] Deleting test user: api_ebdc9bd68e53, userID: 50b6357d-0499-4952-8287-85b495bbaa56
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
