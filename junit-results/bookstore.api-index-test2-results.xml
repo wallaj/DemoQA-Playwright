@@ -1,0 +1,19 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="9.280623000000137">
+<testsuite name="bookStore.api.spec.ts" timestamp="2026-09-03T15:57:56.153Z" hostname="api" tests="1" failures="0" skipped="0" time="5.174" errors="0">
+<testcase name="BOOK STORE API: catalog and user collection › test2 - POST BOOKS: adds a catalog book to a user collection" classname="bookStore.api.spec.ts" time="5.174">
+<system-out>
+<![CDATA[[TEST2] Creating prerequisite API user: api_c68436dc4afc
+[TEST2] Generating the token required to add books
+[TEST2] POST endpoint: /BookStore/v1/Books
+[TEST2] Adding ISBN 9781449325862 to user f994bcb5-bf89-41fc-80dc-a407e4742650
+[TEST2] Add Books response status: 201
+[TEST2] Added book: [{"isbn":"9781449325862"}]
+[TEST2] Getting the user to verify the persisted collection
+[TEST2] ✓ ISBN 9781449325862 was added and persisted successfully
+[TEARDOWN] DELETE endpoint: /Account/v1/User/f994bcb5-bf89-41fc-80dc-a407e4742650
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

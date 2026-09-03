@@ -1,0 +1,21 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.695685000000056">
+<testsuite name="bookStore.api.spec.ts" timestamp="2026-09-03T20:53:16.744Z" hostname="api" tests="1" failures="0" skipped="0" time="6.222" errors="0">
+<testcase name="BOOK STORE API: catalog and user collection › test5 - PUT BOOK: replaces one book in a user collection" classname="bookStore.api.spec.ts" time="6.222">
+<system-out>
+<![CDATA[[TEST5] Creating prerequisite API user: api_74cbf2cc0226
+[TEST5] Generating the token required to manage the collection
+[TEST5] Adding prerequisite ISBN 9781449325862
+[TEST5] PUT endpoint: /BookStore/v1/Books/9781449325862
+[TEST5] Replacing ISBN 9781449325862 with 9781449331818
+[TEST5] Replace Book response status: 200
+[TEST5] Getting the user to verify the persisted replacement
+[TEST5] The original book was not found in the user's collection
+[TEST5] The replacement book(ISBN: 9781449331818) was found in the user's collection
+[TEST5] ✓ ISBN 9781449325862 was replaced by ISBN 9781449331818
+[TEARDOWN] DELETE endpoint: /Account/v1/User/5dff72a0-d182-422f-823b-2d4904beda2c
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

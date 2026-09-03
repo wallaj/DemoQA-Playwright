@@ -1,0 +1,19 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="9.826733000000008">
+<testsuite name="bookStore.api.spec.ts" timestamp="2026-09-03T20:34:46.066Z" hostname="api" tests="1" failures="0" skipped="0" time="6.677" errors="0">
+<testcase name="BOOK STORE API: catalog and user collection › test4 - DELETE BOOK: removes one book from a user collection" classname="bookStore.api.spec.ts" time="6.677">
+<system-out>
+<![CDATA[[TEST4] Creating prerequisite API user: api_cabb83131f5e
+[TEST4] Generating the token required to manage the collection
+[TEST4] Adding prerequisite ISBNs 9781449325862 and 9781449331818
+[TEST4] DELETE endpoint: /BookStore/v1/Book
+[TEST4] Deleting ISBN 9781449325862 from user 0799ce1d-f31d-4621-bcaa-7dcfa5b24182
+[TEST4] Delete Book response status: 204
+[TEST4] Getting the user to verify the remaining collection
+[TEST4] ✓ ISBN 9781449325862 was removed and ISBN 9781449331818 remains
+[TEARDOWN] DELETE endpoint: /Account/v1/User/0799ce1d-f31d-4621-bcaa-7dcfa5b24182
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

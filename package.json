@@ -19,6 +19,7 @@
     "test:forms": "set TEST_FILE=tests/forms.spec.ts&& playwright test tests/forms.spec.ts --project chrome",
     "test:alerts": "set TEST_FILE=tests/alerts.spec.ts&& playwright test tests/alerts.spec.ts --project chrome",
     "test:bookstore": "set TEST_FILE=tests/bookstore.spec.ts&& playwright test tests/bookstore.spec.ts --project chrome",
+    "test:bookstore-api": "set TEST_FILE=tests/bookStore.api.spec.ts&& playwright test tests/bookStore.api.spec.ts --project api",
     "test:api": "set TEST_FILE=tests/api.spec.ts&& playwright test tests/api.spec.ts --project chrome",
     "report:elements": "playwright show-report test-results/elements/index-all",
     "report:checkboxes": "playwright show-report test-results/checkboxes/index-all",
@@ -31,6 +32,7 @@
     "report:forms": "playwright show-report test-results/forms/index-all",
     "report:alerts": "playwright show-report test-results/alerts/index-all",
     "report:bookstore": "playwright show-report test-results/bookstore/index-all",
+    "report:bookstore-api": "playwright show-report test-results/bookstore.api/index-all",
     "report:api": "playwright show-report test-results/api/index-all",
     "report": "playwright show-report test-results/all-tests/index-all"
   },

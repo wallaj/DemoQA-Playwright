@@ -1,6 +1,7 @@
 import type { APIRequestContext, APIResponse } from '@playwright/test';
 import type { DemoQACredentials } from '../utils/auth.utils';
 
+// Playwright request mapping: URL = path; headers = HTTP headers; data = body; params = query parameters.
 // AccountApi class provides methods to interact with the DemoQA Account API endpoints.
 export class AccountApi {
   // Initializes the AccountApi with the provided APIRequestContext.  

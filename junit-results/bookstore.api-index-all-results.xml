@@ -1,0 +1,31 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.259993000000017">
+<testsuite name="bookStore.api.spec.ts" timestamp="2026-09-03T14:22:06.216Z" hostname="api" tests="1" failures="0" skipped="0" time="1.156" errors="0">
+<testcase name="BOOK STORE API: catalog and user collection › test1 - GET BOOKS: returns the public book catalog" classname="bookStore.api.spec.ts" time="1.156">
+<system-out>
+<![CDATA[[TEST1] GET endpoint: /BookStore/v1/Books
+[TEST1] Get Books response status: 200
+[TEST1] Books returned: 8
+
+[TEST1] Validated book: Git Pocket Guide | Author: Richard E. Silverman | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Learning JavaScript Design Patterns | Author: Addy Osmani | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Designing Evolvable Web APIs with ASP.NET | Author: Glenn Block et al. | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Speaking JavaScript | Author: Axel Rauschmayer | Publisher: O'Reilly Media
+
+[TEST1] Validated book: You Don't Know JS | Author: Kyle Simpson | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Programming JavaScript Applications | Author: Eric Elliott | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Eloquent JavaScript, Second Edition | Author: Marijn Haverbeke | Publisher: No Starch Press
+
+[TEST1] Validated book: Understanding ECMAScript 6 | Author: Nicholas C. Zakas | Publisher: No Starch Press
+
+[TEST1] ✓ Public book catalog returned successfully
+
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
