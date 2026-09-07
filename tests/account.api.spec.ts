@@ -125,7 +125,8 @@ test.describe.serial('ACCOUNT API: user lifecycle', () => {
     expect(tokenBody.token).toBeTruthy();
     expect(Number.isNaN(Date.parse(tokenBody.expires))).toBe(false);
 
-    console.log(`[TEST2] Token: ${tokenBody.token}`);
+   
+    console.log(`[TEST2] Token generated: ${Boolean(tokenBody.token)}`);
     console.log(`[TEST2] Token expires: ${tokenBody.expires}`);
     console.log(`[TEST2] Token status: ${tokenBody.status}`);
     console.log('[TEST2] ✓ Authentication token generated successfully');

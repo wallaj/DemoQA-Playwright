@@ -20,7 +20,7 @@
     "test:alerts": "set TEST_FILE=tests/alerts.spec.ts&& playwright test tests/alerts.spec.ts --project chrome",
     "test:bookstore": "set TEST_FILE=tests/bookstore.spec.ts&& playwright test tests/bookstore.spec.ts --project chrome",
     "test:bookstore-api": "set TEST_FILE=tests/bookStore.api.spec.ts&& playwright test tests/bookStore.api.spec.ts --project api",
-    "test:api": "set TEST_FILE=tests/api.spec.ts&& playwright test tests/api.spec.ts --project chrome",
+    "test:api": "playwright test --project api",
     "report:elements": "playwright show-report test-results/elements/index-all",
     "report:checkboxes": "playwright show-report test-results/checkboxes/index-all",
     "report:radio-buttons": "playwright show-report test-results/radiobuttons/index-all",

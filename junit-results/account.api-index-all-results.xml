@@ -1,12 +1,145 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="7.904256999999983">
-<testsuite name="account.api.spec.ts" timestamp="2026-08-31T19:33:24.722Z" hostname="api" tests="1" failures="0" skipped="0" time="5.05" errors="0">
-<testcase name="ACCOUNT API: user lifecycle › test1 - CREATE USER: creates a valid account" classname="account.api.spec.ts" time="5.05">
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="29.8002">
+<testsuite name="account.api.spec.ts" timestamp="2026-09-07T18:06:09.671Z" hostname="api" tests="4" failures="0" skipped="0" time="20.663" errors="0">
+<testcase name="ACCOUNT API: user lifecycle › test1 - CREATE USER: creates a valid account" classname="account.api.spec.ts" time="6.307">
 <system-out>
-<![CDATA[[TEST1] Creating unique API user: api_9fb0c2bb116c
+<![CDATA[[TEST1] Creating unique API user: api_1bb15b605be3
 [TEST1] Create User response status: 201
-[TEST1] Created user ID: 4b6be85f-2f0e-4144-993c-ef1e08332d4b
+[TEST1] Created user ID: 4a86c9cb-3ae8-4f28-b2d4-623d9b90fc60
 [TEST1] ✓ User account created with the expected response successfully
-[TEARDOWN] Deleting test user: api_9fb0c2bb116c, userID: 4b6be85f-2f0e-4144-993c-ef1e08332d4b
+[TEARDOWN] DELETE endpoint: /Account/v1/User/4a86c9cb-3ae8-4f28-b2d4-623d9b90fc60
+[TEARDOWN] Deleting test user: api_1bb15b605be3, userID: 4a86c9cb-3ae8-4f28-b2d4-623d9b90fc60
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: user lifecycle › test2 - GENERATE TOKEN: returns a valid token for an existing user" classname="account.api.spec.ts" time="4.165">
+<system-out>
+<![CDATA[[TEST2] Creating prerequisite API user: api_1bb15b605be3
+[TEST2] Requesting an authentication token with valid credentials
+[TEST2] Generate Token response status: 200
+[TEST2] Token status: Success
+[TEST2] Token generated: true
+[TEST2] Token expires: 2026-09-14T18:06:19.416Z
+[TEST2] Token status: Success
+[TEST2] ✓ Authentication token generated successfully
+[TEARDOWN] DELETE endpoint: /Account/v1/User/4d24e4f1-3b8b-46a4-b699-052136fd7ad2
+[TEARDOWN] Deleting test user: api_1bb15b605be3, userID: 4d24e4f1-3b8b-46a4-b699-052136fd7ad2
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: user lifecycle › test3 - DELETE USER: deletes an existing authenticated account" classname="account.api.spec.ts" time="3.657">
+<system-out>
+<![CDATA[[TEST3] Creating prerequisite API user: api_1bb15b605be3
+[TEST3] Generating the token required to delete the user
+[TEST3] DELETE endpoint: /Account/v1/User/57a33d15-b7aa-4147-81e4-8a122e22a4e7
+[TEST3] Delete User response status: 204
+[TEST3] ✓ User account deleted successfully
+[TEARDOWN] No authenticated test user is available for cleanup
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: user lifecycle › test4 - GET USER: returns an existing authenticated account" classname="account.api.spec.ts" time="6.534">
+<system-out>
+<![CDATA[[TEST4] Creating prerequisite API user: api_1bb15b605be3
+[TEST4] Generating the token required to get the user
+[TEST4] GET endpoint: /Account/v1/User/34360d57-e9ea-4ae9-bf7a-1f9454622801
+[TEST4] Get User response status: 200
+[TEST4] Returned user: api_1bb15b605be3, userID: 34360d57-e9ea-4ae9-bf7a-1f9454622801, 
+      books: []
+[TEST4] ✓ Authenticated user returned successfully
+[TEARDOWN] DELETE endpoint: /Account/v1/User/34360d57-e9ea-4ae9-bf7a-1f9454622801
+[TEARDOWN] Deleting test user: api_1bb15b605be3, userID: 34360d57-e9ea-4ae9-bf7a-1f9454622801
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="bookStore.api.spec.ts" timestamp="2026-09-07T18:06:09.671Z" hostname="api" tests="5" failures="0" skipped="0" time="26.667" errors="0">
+<testcase name="BOOK STORE API: catalog and user collection › test1 - GET BOOKS: returns the public book catalog" classname="bookStore.api.spec.ts" time="1.611">
+<system-out>
+<![CDATA[[TEST1] GET endpoint: /BookStore/v1/Books
+[TEST1] Get Books response status: 200
+[TEST1] Books returned: 8
+
+[TEST1] Validated book: Git Pocket Guide | Author: Richard E. Silverman | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Learning JavaScript Design Patterns | Author: Addy Osmani | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Designing Evolvable Web APIs with ASP.NET | Author: Glenn Block et al. | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Speaking JavaScript | Author: Axel Rauschmayer | Publisher: O'Reilly Media
+
+[TEST1] Validated book: You Don't Know JS | Author: Kyle Simpson | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Programming JavaScript Applications | Author: Eric Elliott | Publisher: O'Reilly Media
+
+[TEST1] Validated book: Eloquent JavaScript, Second Edition | Author: Marijn Haverbeke | Publisher: No Starch Press
+
+[TEST1] Validated book: Understanding ECMAScript 6 | Author: Nicholas C. Zakas | Publisher: No Starch Press
+
+[TEST1] ✓ Public book catalog returned successfully
+
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: catalog and user collection › test2 - POST BOOKS: adds a catalog book to a user collection" classname="bookStore.api.spec.ts" time="8.607">
+<system-out>
+<![CDATA[[TEST2] Creating prerequisite API user: api_3cb9143feba0
+[TEST2] Generating the token required to add books
+[TEST2] POST endpoint: /BookStore/v1/Books
+[TEST2] Adding ISBN 9781449325862 to user 1b8a1fa9-4377-488c-b0d0-785748b282ff
+[TEST2] Add Books response status: 201
+[TEST2] Added book: [{"isbn":"9781449325862"}]
+[TEST2] Getting the user to verify the persisted collection
+[TEST2] ✓ ISBN 9781449325862 was added and persisted successfully
+[TEARDOWN] DELETE endpoint: /Account/v1/User/1b8a1fa9-4377-488c-b0d0-785748b282ff
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: catalog and user collection › test3 - DELETE BOOKS: clears a user collection" classname="bookStore.api.spec.ts" time="7.066">
+<system-out>
+<![CDATA[[TEST3] Creating prerequisite API user: api_3cb9143feba0
+[TEST3] Generating the token required to manage the collection
+[TEST3] Adding prerequisite ISBN 9781449325862
+[TEST3] DELETE endpoint: /BookStore/v1/Books?UserId=9caca0cc-ae26-4764-bf34-8a0641b6b969
+[TEST3] Delete Books response status: 204
+[TEST3] Getting the user to verify the collection is empty
+[TEST3] ✓ User collection was cleared successfully
+[TEARDOWN] DELETE endpoint: /Account/v1/User/9caca0cc-ae26-4764-bf34-8a0641b6b969
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: catalog and user collection › test4 - DELETE BOOK: removes one book from a user collection" classname="bookStore.api.spec.ts" time="4.734">
+<system-out>
+<![CDATA[[TEST4] Creating prerequisite API user: api_3cb9143feba0
+[TEST4] Generating the token required to manage the collection
+[TEST4] Adding prerequisite ISBNs 9781449325862 and 9781449331818
+[TEST4] DELETE endpoint: /BookStore/v1/Book
+[TEST4] Deleting ISBN 9781449325862 from user c3e88458-7d46-4794-8186-ec26d11c164b
+[TEST4] Delete Book response status: 204
+[TEST4] Getting the user to verify the remaining collection
+[TEST4] ✓ ISBN 9781449325862 was removed and ISBN 9781449331818 remains
+[TEARDOWN] DELETE endpoint: /Account/v1/User/c3e88458-7d46-4794-8186-ec26d11c164b
+[TEARDOWN] Test user deleted successfully
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: catalog and user collection › test5 - PUT BOOK: replaces one book in a user collection" classname="bookStore.api.spec.ts" time="4.649">
+<system-out>
+<![CDATA[[TEST5] Creating prerequisite API user: api_3cb9143feba0
+[TEST5] Generating the token required to manage the collection
+[TEST5] Adding prerequisite ISBN 9781449325862
+[TEST5] PUT endpoint: /BookStore/v1/Books/9781449325862
+[TEST5] Replacing ISBN 9781449325862 with 9781449331818
+[TEST5] Replace Book response status: 200
+[TEST5] Getting the user to verify the persisted replacement
+[TEST5] The original book was not found in the user's collection
+[TEST5] The replacement book(ISBN: 9781449331818) was found in the user's collection
+[TEST5] ✓ ISBN 9781449325862 was replaced by ISBN 9781449331818
+[TEARDOWN] DELETE endpoint: /Account/v1/User/e3e925a9-8dee-4e98-b23f-a03dd4a5a3e8
 [TEARDOWN] Test user deleted successfully
 ]]>
 </system-out>

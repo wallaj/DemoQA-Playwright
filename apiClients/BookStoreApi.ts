@@ -7,6 +7,14 @@ export class BookStoreApi {
   async getBooks(): Promise<APIResponse> { // Fetches the public book catalog from the Book Store API
     return this.request.get('/BookStore/v1/Books'); // Sends a GET request to the Book Store API to retrieve the list of books
   }
+
+  // Gets one book from the public catalog by ISBN.
+  async getBook(isbn: string): Promise<APIResponse> {
+    return this.request.get('/BookStore/v1/Book', {
+      params: { ISBN: isbn },
+    });
+  }
+
   // Adds books to a user's collection in the Book Store API
   async addBooks(userId: string, isbns: string[], token: string): Promise<APIResponse> {
     
