@@ -1,0 +1,16 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="9.613072999999858">
+<testsuite name="account.negative.api.spec.ts" timestamp="2026-09-10T14:10:13.604Z" hostname="api" tests="2" failures="0" skipped="0" time="5.84" errors="0">
+<testcase name="ACCOUNT API: negative cases › test4 - CREATE USER: returns 400 for an invalid request" classname="account.negative.api.spec.ts" time="1.131">
+<system-out>
+<![CDATA[[TEST4] POST /Account/v1/User response status: 400
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: negative cases › test6 - DELETE USER: returns 401 for an existing user without a valid token" classname="account.negative.api.spec.ts" time="4.709">
+<system-out>
+<![CDATA[[TEST6] DELETE /Account/v1/User/{UUID} response status: 401
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

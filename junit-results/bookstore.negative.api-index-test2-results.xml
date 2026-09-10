@@ -1,0 +1,11 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="7.865259000000078">
+<testsuite name="bookStore.negative.api.spec.ts" timestamp="2026-09-10T13:57:09.695Z" hostname="api" tests="1" failures="0" skipped="0" time="4.96" errors="0">
+<testcase name="BOOK STORE API: negative cases › test2 - POST BOOKS: returns 401 without a valid token" classname="bookStore.negative.api.spec.ts" time="4.96">
+<system-out>
+<![CDATA[[TEST2] POST /BookStore/v1/Books response status: 401
+[TEST2] DELETE /Account/v1/User response status:  204
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

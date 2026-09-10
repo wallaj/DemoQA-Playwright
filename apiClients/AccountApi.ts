@@ -25,6 +25,13 @@ export class AccountApi {
     });
   }
 
+  // Checks whether the supplied credentials are authorized.
+  async isAuthorized(credentials: DemoQACredentials): Promise<APIResponse> {
+    return this.request.post('/Account/v1/Authorized', {
+      data: credentials,
+    });
+  }
+
   // Gets an authenticated user by ID.
   // Returns a promise that resolves to the API response.
   async getUser(userId: string, token: string): Promise<APIResponse> {

@@ -1,0 +1,12 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.833307999999962">
+<testsuite name="bookStore.negative.api.spec.ts" timestamp="2026-09-10T13:57:51.201Z" hostname="api" tests="1" failures="0" skipped="0" time="7.583" errors="0">
+<testcase name="BOOK STORE API: negative cases › test3 - POST BOOKS: returns 400 for an unavailable ISBN" classname="bookStore.negative.api.spec.ts" time="7.583">
+<system-out>
+<![CDATA[[TEST3] POST /BookStore/v1/Books response status: 400
+[TEST3] POST /BookStore/v1/Books response body: {"code":"1205","message":"ISBN supplied is not available in Books Collection!"} 400
+[TEST3] DELETE /Account/v1/User response status:  204
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

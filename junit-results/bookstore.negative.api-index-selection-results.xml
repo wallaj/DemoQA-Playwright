@@ -1,0 +1,19 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="8.858144999999999">
+<testsuite name="bookStore.negative.api.spec.ts" timestamp="2026-09-10T14:04:47.792Z" hostname="api" tests="2" failures="0" skipped="0" time="12.071" errors="0">
+<testcase name="BOOK STORE API: negative cases › test4 - DELETE BOOKS: returns 401 without a user ID" classname="bookStore.negative.api.spec.ts" time="5.941">
+<system-out>
+<![CDATA[[TEST4] DELETE /BookStore/v1/Books response status: 401
+[TEST4] DELETE /BookStore/v1/Books response body: {"code":"1207","message":"User Id not correct!"} 401
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test5 - DELETE BOOKS: returns 401 without a valid token" classname="bookStore.negative.api.spec.ts" time="6.13">
+<system-out>
+<![CDATA[[TEST5] DELETE /BookStore/v1/Books response status: 401
+[TEST5] DELETE /BookStore/v1/Books response body: {"code":"1200","message":"User not authorized!"} 401
+[TEST5] DELETE /Account/v1/User response status:  204
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

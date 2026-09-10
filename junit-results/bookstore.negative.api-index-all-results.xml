@@ -1,0 +1,123 @@
+<testsuites id="" name="" tests="11" failures="1" skipped="0" errors="0" time="41.77698699999996">
+<testsuite name="bookStore.negative.api.spec.ts" timestamp="2026-09-10T13:39:35.463Z" hostname="api" tests="11" failures="1" skipped="0" time="36.836" errors="0">
+<testcase name="BOOK STORE API: negative cases › test1 - POST BOOKS: returns 500 for an invalid request body" classname="bookStore.negative.api.spec.ts" time="1.102">
+<system-out>
+<![CDATA[[TEST1] POST /BookStore/v1/Books response status: 500
+[TEST1] POST /BookStore/v1/Books response body: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>TypeError: Cannot read properties of undefined (reading &#39;length&#39;)<br> &nbsp; &nbsp;at file:///usr/projects/demosite-new/api/routes/books.js:43:36<br> &nbsp; &nbsp;at Layer.handleRequest (/usr/projects/demosite-new/node_modules/router/lib/layer.js:152:17)<br> &nbsp; &nbsp;at next (/usr/projects/demosite-new/node_modules/router/lib/route.js:157:13)<br> &nbsp; &nbsp;at Route.dispatch (/usr/projects/demosite-new/node_modules/router/lib/route.js:117:3)<br> &nbsp; &nbsp;at handle (/usr/projects/demosite-new/node_modules/router/index.js:435:11)<br> &nbsp; &nbsp;at Layer.handleRequest (/usr/projects/demosite-new/node_modules/router/lib/layer.js:152:17)<br> &nbsp; &nbsp;at /usr/projects/demosite-new/node_modules/router/index.js:295:15<br> &nbsp; &nbsp;at processParams (/usr/projects/demosite-new/node_modules/router/index.js:582:12)<br> &nbsp; &nbsp;at next (/usr/projects/demosite-new/node_modules/router/index.js:291:5)<br> &nbsp; &nbsp;at Function.handle (/usr/projects/demosite-new/node_modules/router/index.js:186:3)</pre>
+</body>
+</html>
+ 500
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test2 - POST BOOKS: returns 401 without a valid token" classname="bookStore.negative.api.spec.ts" time="4.589">
+<system-out>
+<![CDATA[[TEST2] POST /BookStore/v1/Books response status: 401
+[TEST2] DELETE /Account/v1/User response status:  204
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test3 - POST BOOKS: returns 500 for an unknown user" classname="bookStore.negative.api.spec.ts" time="4.229">
+<system-out>
+<![CDATA[[TEST3] POST /BookStore/v1/Books response status: 401
+[TEST3] DELETE /Account/v1/User response status:  204
+
+[[ATTACHMENT|..\test-results\all-tests\index-all\bookStore.negative.api-BOO-e5108-rns-500-for-an-unknown-user-api\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [api] › bookStore.negative.api.spec.ts:55:7 › BOOK STORE API: negative cases › test3 - POST BOOKS: returns 500 for an unknown user 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 500
+    Received: 401
+
+      64 |       const response = await bookStoreApi.addBooks(unknownUserId, [validIsbn], token); // Attempt to add a valid book for an unknown user
+      65 |       console.log(`[TEST3] POST /BookStore/v1/Books response status: ${response.status()}`);
+    > 66 |       expect(response.status()).toBe(500); // DemoQA returns an internal server error for an unknown user
+         |                                 ^
+      67 |       console.log(`[TEST3] POST /BookStore/v1/Books response body: ${await response.text()} ${response.status()}`); // Log the response body for debugging purposes
+      68 |     } finally {
+      69 |       const deleteResponse = await accountApi.deleteUser(userId, token); // Clean up by deleting the created user
+        at C:\DemoQA-Playwright\tests\bookStore.negative.api.spec.ts:66:33
+
+    Error Context: ..\test-results\all-tests\index-all\bookStore.negative.api-BOO-e5108-rns-500-for-an-unknown-user-api\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test4 - DELETE BOOKS: returns 401 without a user ID" classname="bookStore.negative.api.spec.ts" time="5.162">
+<system-out>
+<![CDATA[[TEST4] DELETE /BookStore/v1/Books response status: 401
+[TEST4] DELETE /BookStore/v1/Books response body: {"code":"1207","message":"User Id not correct!"} 401
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test5 - DELETE BOOKS: returns 401 without a valid token" classname="bookStore.negative.api.spec.ts" time="4.15">
+<system-out>
+<![CDATA[[TEST5] DELETE /BookStore/v1/Books response status: 401
+[TEST5] DELETE /BookStore/v1/Books response body: {"code":"1200","message":"User not authorized!"} 401
+[TEST5] DELETE /Account/v1/User response status:  204
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test6 - GET BOOK: returns 400 for an unavailable ISBN" classname="bookStore.negative.api.spec.ts" time="0.281">
+<system-out>
+<![CDATA[[TEST6] GET /BookStore/v1/Book response status: 400
+[TEST6] GET /BookStore/v1/Book response body: {"code":"1205","message":"ISBN supplied is not available in Books Collection!"} 400
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test7 - DELETE BOOK: returns 500 for an invalid request body" classname="bookStore.negative.api.spec.ts" time="3.505">
+<system-out>
+<![CDATA[[TEST7] DELETE /BookStore/v1/Book response status: 500
+[TEST7] DELETE /BookStore/v1/Book response body: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Error</title>
+</head>
+<body>
+<pre>Error: WHERE parameter &quot;user_id&quot; has invalid &quot;undefined&quot; value<br> &nbsp; &nbsp;at MySQLQueryGenerator.whereItemQuery (/usr/projects/demosite-new/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1746:13)<br> &nbsp; &nbsp;at /usr/projects/demosite-new/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1737:25<br> &nbsp; &nbsp;at Array.forEach (&lt;anonymous&gt;)<br> &nbsp; &nbsp;at MySQLQueryGenerator.whereItemsQuery (/usr/projects/demosite-new/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1735:35)<br> &nbsp; &nbsp;at MySQLQueryGenerator.getWhereConditions (/usr/projects/demosite-new/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2078:19)<br> &nbsp; &nbsp;at MySQLQueryGenerator.selectQuery (/usr/projects/demosite-new/node_modules/sequelize/lib/dialects/abstract/query-generator.js:991:28)<br> &nbsp; &nbsp;at MySQLQueryInterface.select (/usr/projects/demosite-new/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)<br> &nbsp; &nbsp;at users.findAll (/usr/projects/demosite-new/node_modules/sequelize/lib/model.js:1140:47)<br> &nbsp; &nbsp;at process.processTicksAndRejections (node:internal/process/task_queues:105:5)<br> &nbsp; &nbsp;at async users.findOne (/usr/projects/demosite-new/node_modules/sequelize/lib/model.js:1240:12)</pre>
+</body>
+</html>
+ 500
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test8 - DELETE BOOK: returns 401 without a valid token" classname="bookStore.negative.api.spec.ts" time="4.698">
+<system-out>
+<![CDATA[[TEST8] DELETE /BookStore/v1/Book response status: 401
+[TEST8] DELETE /Account/v1/User response status:  204
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test9 - DELETE BOOK: returns 400 for an unavailable ISBN" classname="bookStore.negative.api.spec.ts" time="4.751">
+<system-out>
+<![CDATA[[TEST9] DELETE /BookStore/v1/Book response status: 400
+[TEST9] DELETE /Account/v1/User response status:  204
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test10 - PUT BOOK: returns 400 for an invalid request body" classname="bookStore.negative.api.spec.ts" time="0.271">
+<system-out>
+<![CDATA[[TEST10] PUT /BookStore/v1/Books/{ISBN} response status: 400
+]]>
+</system-out>
+</testcase>
+<testcase name="BOOK STORE API: negative cases › test11 - PUT BOOK: returns 401 without a valid token" classname="bookStore.negative.api.spec.ts" time="4.098">
+<system-out>
+<![CDATA[[TEST11] PUT /BookStore/v1/Books/{ISBN} response status: 401
+[TEST11] DELETE /Account/v1/User response status:  204
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

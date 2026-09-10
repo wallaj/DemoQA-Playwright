@@ -1,0 +1,46 @@
+<testsuites id="" name="" tests="7" failures="0" skipped="0" errors="0" time="19.085935000000056">
+<testsuite name="account.negative.api.spec.ts" timestamp="2026-09-10T14:12:05.054Z" hostname="api" tests="7" failures="0" skipped="0" time="16.236" errors="0">
+<testcase name="ACCOUNT API: negative cases › test1 - AUTHORIZED: returns 400 for an invalid request body" classname="account.negative.api.spec.ts" time="1.152">
+<system-out>
+<![CDATA[[TEST1] POST /Account/v1/Authorized response status: 400
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: negative cases › test2 - AUTHORIZED: returns 404 for unknown credentials" classname="account.negative.api.spec.ts" time="1.149">
+<system-out>
+<![CDATA[[TEST2] POST /Account/v1/Authorized response status: 404
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: negative cases › test3 - GENERATE TOKEN: returns 400 for an invalid request body" classname="account.negative.api.spec.ts" time="0.282">
+<system-out>
+<![CDATA[[TEST3] POST /Account/v1/GenerateToken response status: 400
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: negative cases › test4 - CREATE USER: returns 400 for an invalid request" classname="account.negative.api.spec.ts" time="0.283">
+<system-out>
+<![CDATA[[TEST4] POST /Account/v1/User response status: 400
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: negative cases › test5 - CREATE USER: returns 406 for a duplicate username" classname="account.negative.api.spec.ts" time="5.871">
+<system-out>
+<![CDATA[[TEST5] POST /Account/v1/User response status: 406
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: negative cases › test6 - DELETE USER: returns 401 for an existing user without a valid token" classname="account.negative.api.spec.ts" time="7.233">
+<system-out>
+<![CDATA[[TEST6] DELETE /Account/v1/User/{UUID} response status: 401
+]]>
+</system-out>
+</testcase>
+<testcase name="ACCOUNT API: negative cases › test7 - GET USER: returns 401 without a valid token" classname="account.negative.api.spec.ts" time="0.266">
+<system-out>
+<![CDATA[[TEST7] GET /Account/v1/User/{UUID} response status: 401
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
